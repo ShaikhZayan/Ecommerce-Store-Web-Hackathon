@@ -1,0 +1,73 @@
+import React, { FC } from "react";
+import Cardcode from "../card/cards";
+import products from "../mockup";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import { Product } from "../type";
+
+const productChecks = products.slice(0, 6);
+
+const ProductCarousel: FC<{ products: Array<Product> }> = ({ products }) => {
+  let initialX: number;
+  let isDragging = false;
+  let tabBox: any;
+
+  const isBrowser = () => typeof window !== "undefined";
+
+  if (isBrowser()) {
+    tabBox = document.querySelector(".scrollGrab");
+  }
+
+  // Desktop functions
+  function mouseMoves(e: any) {
+    if (!isDragging) return;
+    if (tabBox) {
+      tabBox.scrollLeft -= e.movementX;
+    }
+  }
+  function mouseDown() {
+    isDragging = true;
+  }
+  function mouseUp() {
+    isDragging = false;
+  }
+
+  // mobile functions
+  function mouseMovesForMobile(e: any) {
+    if (!isDragging) return;
+    if (tabBox) {
+      var currentX = e.touches[0].clientX;
+      var movementX = currentX - initialX;
+      tabBox.scrollLeft -= movementX / 5;
+    }
+  }
+  function mouseDownForMobile(e: any) {
+    isDragging = true;
+    initialX = e.touches[0].clientX;
+  }
+
+  // You can implement the carousel and related code here if needed
+  return null;
+};
+
+const Card: FC = () => {
+  return (
+    <div>
+      <div className="flex flex-wrap justify-center mt-16">
+        {productChecks.map((product) => (
+          <Cardcode
+            key={product.id}
+            title={product.name}
+            price={product.price}
+            category={product.category}
+            alt={product.alttext}
+            id={product.id}
+            image={product.image}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Card;

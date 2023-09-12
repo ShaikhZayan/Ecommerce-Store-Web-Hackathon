@@ -1,0 +1,62 @@
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { Product } from '@/components/type';
+
+// Define your initial state for the cart
+
+
+export interface CartItem {
+  id?: number ;
+  product?: Product[];
+  quantity: number;
+}
+
+
+const initialState: CartItem[] = [];
+
+const counterSlice = createSlice({
+  name: 'cart',
+  initialState, // Initialize your state here
+  reducers: {
+    addToCart: (state, action: PayloadAction<CartItem>) => {
+    console.log(state, action)
+      const { id, product, quantity } = action.payload;
+
+      const existingItem = state.find((item) => item.id === id);
+
+      if (existingItem) {
+        // Item already exists in the cart, increase quantity
+        existingItem.quantity += quantity;
+      } else {
+        // Item doesn't exist in the cart, add it
+        state.push({
+          id,
+          product,
+          quantity,
+        });
+      }
+    },
+    removeFromCart: (state, action: PayloadAction<number>) => {
+     
+
+      const productId = action.payload;
+
+      const existingItemIndex = state.findIndex((item) => item.id === productId);
+
+      if (existingItemIndex !== -1) {
+        // Item found, decrease quantity or remove if quantity is 1
+        if (state[existingItemIndex].quantity > 1) {
+          state[existingItemIndex].quantity -= 1;
+        } else {
+          // Remove the item from the cart if quantity is 1
+          state.splice(existingItemIndex, 1);
+        }
+      }
+    },
+    clearCart: () => [],
+  },
+});
+
+// Action creators are generated for each case reducer function
+export const cartActions = counterSlice.actions;
+
+export default counterSlice.reducer;

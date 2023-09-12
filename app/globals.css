@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Sora;
+  src: url(../public/sora-bold.otf);
+
+}
+
+
+@media (max-width: 640px) {
+  .hide-on-phone {
+    display: none;
+  }
+}
+
+/* global.css */
+
+
+
+#HeroPageHeading {
+  font-family: Sora;
+}
+
+#overview {
+  font-family: Sora;
+}
+
+/* styles.css (or your preferred CSS file) */
+.card-scale {
+  transition: transform 0.2s ease-in-out;
+}
+
+.card-scale:hover {
+  transform: scale(1.1);
+}
+
+
+
+@layer utilities {
+  .mesh-gradient {
+    background-image: radial-gradient(circle at top left, #f56565, #4299e1, #48bb78, #f6ad55);
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s ease infinite;
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--background);
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--accent);
+  bottom: 100px;
+}
+
+#section1 {
+  padding-top: 85vh;
+  padding-bottom: 85vh;
+  position: relative;
+}
+
+#parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#parallax #scroller {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 64px;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#parallax span {
+  display: block;
+  margin-right: 30px;
+}
+

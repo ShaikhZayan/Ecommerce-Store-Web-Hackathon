@@ -1,0 +1,96 @@
+import products from '@/components/mockup'
+import navbar from '@/components/nav/page'
+import { StaticImageData } from 'next/image';
+import React from 'react'
+import { Product } from '@/components/type';
+import Image from 'next/image';
+import hero from '@/components/hero/page';
+import Link from 'next/link';
+import Quantity from '@/components/Quantity';
+import Navbar from '@/components/nav/page';
+import AddToCart from '@/components/ui/AddToCart';
+import { Button } from '@/components/ui/Button';
+
+
+const getProductsDetail = (id: number) => {
+  return products.filter((product) => product.id == id);
+
+};
+
+
+export default function Page({ params }: { params: { id: number } }) {
+
+  const sizes = [" xs ", " sm ", " md ", " lg ", " xl "]
+  const result = getProductsDetail(params.id);
+
+  return (
+    <div>
+
+<div className="flex flex-wrap py-1 px-2 md:px-8 lg:px-32 mt-16 justify-center md:items-center md:flex-row mx-auto max-w-screen-xl">
+  {result.map((product) => (
+    <div key={product.id} className="flex flex-col lg:flex-row gap-6 w-full">
+      {/* left image */}
+      <div className="lg:w-2/5">
+        <Image src={product.image} alt={product.name} width="380" height="380" className="mx-auto" />
+      </div>
+      {/* right image */}
+      <div className="lg:w-1/2">
+        <div>
+          <h1 className="text-2xl text-center lg:text-left">
+            {product.name}
+          </h1>
+          <h2 className="text-base font-semibold text-gray-400 text-center lg:text-left">
+            {product.brandname}
+          </h2>
+        </div>
+        <div className='mt-1 mx-auto lg:mx-0 w-[270px]'>
+          <hr />
+        </div>
+        <div className='mx-auto lg:mx-0 w-[270px]'>
+          <p className='mt-1 font-sans text-[14px] text-center lg:text-left'>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, laborum?
+          </p>
+        </div>
+        <div>
+          <h3 className="mt-6 text-xs font-semibold text-center lg:text-left">SELECT SIZE</h3>
+          {/* Sizes */}
+          <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
+            {sizes.map((size) => (
+              <button
+                key={size}
+                className="flex justify-center items-center w-8 h-8 duration-300 border rounded-full hover:shadow-xl"
+              >
+                <span className="text-xs font-semibold text-gray-600">
+                  {size}
+                </span>
+              </button>
+            ))}
+          </div>
+
+          {/* Quantity */}
+          <div className="flex item-center mt-6 justify-center lg:justify-start gap-x-3">
+            <h3 className="text-lg font-semibold">Quantity</h3>
+            <Quantity />
+          </div>
+          {/* Add To Cart */}
+          <div className='mt-5'>
+          <Button className='bg-gray-900 text-gray-50 rounded-xl' variant="outline">Add To Cart</Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+  );
+}
