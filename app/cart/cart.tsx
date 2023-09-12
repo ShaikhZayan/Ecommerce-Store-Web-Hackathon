@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const Cart = () => {
   return (
@@ -8,7 +9,7 @@ const Cart = () => {
     <div className='md:col-span-2'>
       {/* Example cart item */}
       <div className='flex items-center space-x-4 p-4 border-b border-gray-300'>
-        <img src='item-image-url' alt='Item' className='w-20 h-20 object-cover rounded-lg' />
+        <Image src={'item-image-url'} alt='Item' className='w-20 h-20 object-cover rounded-lg' />
         <div>
           <h3 className='text-lg font-semibold'>Product Name</h3>
           <p className='text-gray-500'>Quantity: 2</p>

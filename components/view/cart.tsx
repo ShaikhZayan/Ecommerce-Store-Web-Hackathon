@@ -27,7 +27,7 @@ function CartPage() {
                   {cartArray.map((items: CartItem, i: number) => (
                     <Image
                       key={i}
-                      alt={items.product.a}
+                      alt={items.product.alttext}
                       src={items.product.image}
                       width={1000}
                       height={1000}

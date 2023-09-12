@@ -26,6 +26,9 @@ import { CartItem } from "@/app/store/Slice/cartSlice";
 
 export default function Navbar() {
   const cartValue = useSelector((state: RootState) => state.cart);
+
+  // Calculate the total cart quantity
+  const totalQuantity = cartValue.reduce((total, item) => total + item.quantity, 0);
   return (
     <div>
       <nav className="bg-white">
@@ -42,7 +45,7 @@ export default function Navbar() {
               <Link href={"/cart"}>
                 <div className="hover:duration-200 hover:scale-110">
                   <span className="absolute rounded-full bg-red-500 w-4 h-4 mx-3 -mt-1 flex items-center justify-center text-white text-xs">
-                    <div className="mr-[2px] ml-[1px] -mt-[1px] mb-[1px] text-[11px]">{cartValue[0]?.quantity}</div>
+                    <div className="mr-[2px] ml-[1px] -mt-[1px] mb-[1px] text-[11px]">{totalQuantity}</div>
                   </span>
                   <ShoppingCart />
                 </div>

@@ -36,20 +36,16 @@ export default function Page({ params }: { params: { id: number } }) {
   return (
     <div>
 
-      {/* <div className="flex flex-wrap py-1 px-2 md:px-8 lg:px-32 mt-10 justify-center md:items-center md:flex-row mx-auto max-w-screen-xl"> */}
       <div className="flex flex-wrap justify-center">
-        {result.map((product) => (
-          <div>
+        {result.map((product , index) => (
+          <div key={index}>
 
-            {/* ______________________ */}
 
 
             <div className="flex flex-col lg:flex-row justify-center items-center py-10">
 
-              {/* left */}
               <div className="flex gap-x-4 md:gap-x-8">
 
-                {/* left */}
                 <div className="space-y-4">
 
                   <div className="w-16 md:w-24">
@@ -58,7 +54,6 @@ export default function Page({ params }: { params: { id: number } }) {
 
                 </div>
 
-                {/* right */}
                 <div className="w-[17rem] md:w-[33rem] flex flex-wrap-0">
 
                   <Image width={1000} height={1000} alt={product.alttext} src={product.image} />
@@ -86,13 +81,10 @@ export default function Page({ params }: { params: { id: number } }) {
                   <p className="font-semibold text-xl text-gray-800">Quantity:</p>
 
                   <div className='flex items-center gap-x-2' >
-                    {/* Minus */}
                     <button className='w-10 h-7 border rounded-full justify-center hover:shadow-xl' onClick={() => {
                       setNum(num <= 1 ? 1 : num - 1)
                     }}> - </button>
-                    {/* Number */}
                     <span className='text-sm font-mono font-semibold'>{num}</span>
-                    {/* Plus */}
                     <button className='w-10 h-7 border rounded-full justify-center hover:shadow-xl ' onClick={() => {
                       setNum(num + 1)
                     }}> + </button>
@@ -101,12 +93,11 @@ export default function Page({ params }: { params: { id: number } }) {
 
                 </div>
                 <div className="flex gap-x-8 items-center">
-                  {/* <AddToCart/> */}
                   <Button
               onClick={() => {
                 dispatch(cartActions.addToCart({
                   quantity: num,
-                  product: product, // Pass the product object
+                  product: product,
                 }));
               }}
               className="flex items-center text-white bg-gray-900 border border-gray-500 px-4 py-2"
@@ -147,12 +138,11 @@ export default function Page({ params }: { params: { id: number } }) {
           </div>
 
 
-          // ______________________
 
         ))
         }
       </div >
-    //  </div >
+    </div >
 
 
 
