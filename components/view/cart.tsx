@@ -4,104 +4,107 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Trash2 } from 'lucide-react';
 import Image from 'next/image';
 import { Product } from '../type';
-import { CartItem, cartActions } from '@/app/store/Slice/cartSlice';
+import { CartItem, addToCart, removeFromCart } from '@/app/store/Slice/cartSlice';
 
 function CartPage() {
   const cartArray = useSelector((state: any) => state.cart);
   const dispatch = useDispatch();
 
-  return (
-    <div>
+    return (
       <div>
-        <div className="py-6">
-          {/* heading */}
-          <h1 className="text-2xl font-semibold text-gray-900">Shopping Cart</h1>
-        </div>
-        <div className="flex justify-between flex-wrap">
-          {/* products data show */}
-          <div className="flex flex-col gap-5">
-            {cartArray &&
-              cartArray.map((cartItem: CartItem, index: number) => (
-                <div className="flex gap-5" key={index}>
-                 <div className="w-40 basis-1/4">
-                  {cartArray.map((items: CartItem, i: number) => (
-                    <Image
-                      key={i}
-                      alt={items.product.alttext}
-                      src={items.product.image}
-                      width={1000}
-                      height={1000}
-                    />
-                  ))}
-                </div>
-                  <div>
-                    {/* products detail */}
-                    <div className="space-y-1 md:space-y-3 w-full">
-                      <div className="flex justify-between">
-                        <h2 className="md:text-2xl font-light text-gray-700">
-                          {cartItem.product.name} {/* Access the product property first */}
-                        </h2>
-                        <div className="cursor-pointer">
-                          <Trash2
-                            size={28}
-                            onClick={() => {
-                              dispatch(cartActions.removeFromCart(cartItem.id || 0)); // Provide a fallback value for id
-                            }}
-                          />
-                        </div>
+        <div>
+          <div className="mx-auto">
+            <div className="py-6">
+              {/* heading */}
+              <h1 className="text-2xl font-semibold text-gray-900">Shopping Cart</h1>
+            </div>
+            <div className="flex flex-col lg:flex-row lg:justify-between ">
+              {/* products data show */}
+              <div className="flex flex-col basis-2/4 justify-center sm:justify-between gap-5 w-full ">
+                {cartArray &&
+                  cartArray.map((cartItem: CartItem, index: number) => (
+                    <div className="flex flex-col w-full justify-center sm:justify-start items-center sm:flex-row gap-5  " key={index}>
+                      <div className="w-40 basis-1/4">
+
+                        <Image
+                          alt={cartItem.product.alttext}
+                          src={cartItem.product.image}
+                          width={1000}
+                          height={1000}
+                        />
+
                       </div>
-                      <p className="text-gray-400 font-medium">
-                        {cartItem.product.category} {/* Access the product property first */}
-                      </p>
-                      <h3 className="text-sm md:text-base">Delivery Estimation</h3>
-                      <h4 className="text-orange-400 font-semibold md:text-xl">
-                        5 Working Days
-                      </h4>
-                      <div className="flex justify-between">
-                        <div className="font-semibold md:text-lg">
-                          ${cartItem.product.price} {/* Access the product property first */}
-                        </div>
-                        <div className="flex gap-2">
-                          <button className="select-none cursor-pointer flex justify-center items-center w-8 h-8 rounded-full bg-gray-200">
-                            -
-                          </button>
-                          {/* <p>{item.qty}</p> */}
-                          <button className="border select-none cursor-pointer flex justify-center items-center w-8 h-8 rounded-full border-gray-800">
-                            +
-                          </button>
+                      <div className="basis-3/4">
+                        {/* products detail */}
+                        <div className="space-y-1 md:space-y-3 w-full ">
+                          <div className="flex  w-full ">
+                            <h2 className="md:text-2xl font-light text-gray-700 w-full ">
+                              {cartItem.product.name}
+                            </h2>
+                            <div className="cursor-pointer">
+                              <Trash2
+                                size={28}
+                                onClick={() => {
+                                  dispatch(removeFromCart(cartItem.product.id || 0)); // Provide a fallback value for id
+                                }}
+                              />
+                            </div>
+                          </div>
+                          <p className="text-gray-400 font-medium">{cartItem.product.category}</p>
+                          <h3 className="text-sm md:text-base">
+                            Delivery Estimation
+                          </h3>
+                          <h4 className=" font-semibold md:text-xl">
+                            5 Working Days
+                          </h4>
+                          <div className="flex justify-between">
+                            <div className="font-semibold md:text-lg">
+                              ${cartItem.product.price}
+                            </div>
+                            <div className="flex gap-2">
+                              <button className="select-none cursor-pointer flex justify-center items-center w-9 h-9 rounded-full bg-gray-200" >
+                                -
+                              </button>
+                              <p>{0}</p>
+                              <button className="select-none cursor-pointer flex justify-center items-center w-9 h-9 rounded-full border border-gray-800">
+                                +
+                              </button>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              ))}
-          </div>
+                  ))}
 
-          <div>
-            {/* subtotal */}
-            <div className="basis-1/4 space-y-6 px-6">
-              <h6 className="font-semibold text-xl">Order Summary</h6>
-              <div className="flex justify-between">
-                <p className="text-lg font-light">Quantity:</p>
-                <p className="text-lg font-light">
-                  {cartArray.length} Product
-                </p>
+                {/* image and products */}
               </div>
-              <div className="flex justify-between">
-                <p className="text-lg font-light">Subtotal:</p>
-                <p>
-                  {/* ${cartArray.reduce((total, cartItem) => total + (cartItem.product[0].price || 0), 0)} Calculate subtotal */}
-                </p>
+
+              <div>
+                {/* subtotal */}
+                <div className="basis-1/4 space-y-6 p-2 zero:px-6 mt-12 lg:mt-0 rounded-md bg-slate-100">
+                  <h6 className="font-semibold text-xl">Order Summary</h6>
+                  <div className="flex justify-between">
+                    <p className="text-lg font-light">Quantity:</p>
+                    <p className="text-lg font-light">
+                      {cartArray.totalQuantity} Product
+                    </p>
+                  </div>
+                  <div className="flex justify-between">
+                    <p className="text-lg font-light">Subtotal:</p>
+                    <p>${cartArray.totalAmount}</p>
+                  </div>
+                  <button className="text-white bg-gray-900 border border-gray-500 px-4 py-2 w-full">
+                    Proceed To CheckOut
+                  </button>
+                </div>
               </div>
-              <button className="text-white bg-gray-900 border border-gray-500 px-4 py-2 w-full">
-                Proceed To CheckOut
-              </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
+
+
 
 export default CartPage;

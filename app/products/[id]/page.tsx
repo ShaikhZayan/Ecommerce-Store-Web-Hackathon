@@ -13,7 +13,7 @@ import { Button } from '@/components/ui/Button';
 import PortableText from 'react-portable-text';
 import { ShoppingCart } from 'lucide-react';
 import Productimg1 from "@/public/product-page-01-related-product-01 (1).jpg";
-import { CartItem, cartActions } from '@/app/store/Slice/cartSlice';
+import { CartItem, addToCart } from '@/app/store/Slice/cartSlice';
 import { useDispatch } from "react-redux"
 
 
@@ -37,7 +37,7 @@ export default function Page({ params }: { params: { id: number } }) {
     <div>
 
       <div className="flex flex-wrap justify-center">
-        {result.map((product , index) => (
+        {result.map((product, index) => (
           <div key={index}>
 
 
@@ -94,16 +94,29 @@ export default function Page({ params }: { params: { id: number } }) {
                 </div>
                 <div className="flex gap-x-8 items-center">
                   <Button
-              onClick={() => {
-                dispatch(cartActions.addToCart({
-                  quantity: num,
-                  product: product,
-                }));
-              }}
-              className="flex items-center text-white bg-gray-900 border border-gray-500 px-4 py-2"
-            >
-              <ShoppingCart /> &nbsp; &nbsp; Add to Cart
-            </Button>
+                   onClick={() => {
+                    dispatch(
+                      addToCart({
+                        quantity: num,
+                       // You might want to replace this with a proper ID
+                        product: {
+                          id: product.id,
+                          name: product.name,
+                          price: product.price,
+                          prodtitle: product.prodtitle,
+                          image: product.image,
+                          alttext: product.alttext,
+                          brandname: product.brandname,
+                          desc: product.desc,
+                          category: product.category,
+                        },
+                      })
+                    );
+                  }}
+                    className="flex items-center text-white bg-gray-900 border border-gray-500 px-4 py-2"
+                  >
+                    <ShoppingCart /> &nbsp; &nbsp; Add to Cart
+                  </Button>
                   <p className="text-2xl font-semibold">${product.price}</p>
                 </div>
               </div>
