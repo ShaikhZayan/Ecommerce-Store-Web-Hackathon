@@ -13,6 +13,7 @@ function CartPage() {
     return (
       <div>
         <div>
+        <section className='mx-auto max-w-screen-xl px-3 med:px-10 zero:px-4 '>
           <div className="mx-auto">
             <div className="py-6">
               {/* heading */}
@@ -100,8 +101,11 @@ function CartPage() {
               </div>
             </div>
           </div>
+          </section>
         </div>
+
       </div>
+      
     );
   }
 
