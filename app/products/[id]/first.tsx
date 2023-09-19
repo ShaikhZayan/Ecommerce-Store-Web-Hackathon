@@ -63,7 +63,7 @@ export default function Page({ params }: { params: { id: number } }) {
               </div>
 
               <div className="p-6 space-y-8">
-                <div className='py-10'>
+                <div className=''>
                   <h1 className="text-3xl text-gray-700">{product.name}</h1>
                   <p className="text-pink-600 text-xl font-medium">{product.brandname}</p>
                 </div>
@@ -113,44 +113,41 @@ export default function Page({ params }: { params: { id: number } }) {
                       })
                     );
                   }}
-                  variant={"secondary"}
-                    className="flex items-centerpx-4 py-2"
+                    className="flex items-center text-white bg-gray-900 border border-gray-500 px-4 py-2"
                   >
                     <ShoppingCart /> &nbsp; &nbsp; Add to Cart
-                  </Button >
+                  </Button>
                   <p className="text-2xl font-semibold">${product.price}</p>
                 </div>
               </div>
 
             </div>
-            <div className='lg:mx-32 lg:my-24 '>
-            <div className="relative py-14 px-2 border-b border-gray-400">
-          <h2 className="top-0 absolute text-6xl md:text-[9rem] font-bold text-gray-200 text-center mx-1 -z-50 ">Overview</h2>
-          <p className="font-semibold text-1xl">Product Information</p>
-        </div>
-        <div className="text-gray-600">
-          <div className="flex px-2 py-4">
-            <div className="w-80">
-              <h3 className="font-semibold">PRODUCT DETAILS</h3>
-            </div>
-            <p>
-             {product.desc}
-            </p>
-          </div>
-          <div className="flex px-2 py-8">
-            <div className="w-80">
-              <h3 className="font-semibold">PRODUCT CARE</h3>
-            </div>
-            <ul className="pl-3 list-disc font-semibold text-gray-900">
-              <li>Hand wash using cold water.</li>
-              <li>Do not using bleach.</li>
-              <li>Hang it to dry.</li>
-              <li>Iron on low temperature.</li>
-              </ul>
+            <div className='lg:mx-32 lg:my-24'>
+              <div className="relative py-14 px-5 border-b border-gray-400">
+                <h2 id='overview' className="top-0 px-5 absolute text-6xl md:text-[9rem] text-gray-200 text-center mx-auto -z-50 ">Overview</h2>
+                <p style={{ fontFamily: 'Sora' }} className="text-gray-700 font-bold text-2xl">Product Information</p>
+              </div>
+              <div className="text-gray-600">
+                <div className="flex px-2 py-4">
+                  <div className="w-60">
+                    <h3 className="font-bold text-md">PRODUCT DETAILS</h3>
+                  </div>
+                  <p>
+                    {product.desc}
+                  </p>
+                </div>
+                <div className="flex px-2 py-8">
+                  <div className="w-60">
+                    <h3 className="font-bold text-md">PRODUCT CARE</h3>
+                  </div>
+                  <ul className="pl-3 list-disc font-semibold text-gray-900">
+                    <li>Hand wash using cold water.</li>
+                    <li>Do not using bleach.</li>
+                  </ul>
+                </div>
               </div>
             </div>
             <div className="h-16" />
-          </div>
           </div>
 
 

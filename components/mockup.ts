@@ -21,7 +21,7 @@ import productimg11 from '@/public/product11.png'
         name:"Brushed Raglan Sweatshirt",
         price:"88",
         alttext:"ge",
-        category:"Male",
+        category:"Gay",
         prodtitle:"gr",
         brandname:"Luis Vuitton",
         desc:`Fam locavore kickstarter distillery. Mixtape chillwave tumeric.`,
@@ -36,7 +36,7 @@ import productimg11 from '@/public/product11.png'
         price:"100",
         prodtitle:"gr",
         brandname:"grdg",
-        desc:"rgrdgrd",
+        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image:productimg2
         
     },
@@ -48,7 +48,7 @@ import productimg11 from '@/public/product11.png'
         alttext:"ge",
         prodtitle:"gr",
         brandname:"grdg",
-        desc:"rgrdgrd",
+        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image:productimg3
         
     },
@@ -60,7 +60,7 @@ import productimg11 from '@/public/product11.png'
         prodtitle:"gr",
         alttext:"ge",
         brandname:"grdg",
-        desc:"rgrdgrd",
+        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image:productimg4
         
     },
@@ -72,7 +72,7 @@ import productimg11 from '@/public/product11.png'
         prodtitle:"gr",
         alttext:"ge",
         brandname:"grdg",
-        desc:"rgrdgrd",
+        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image:productimg5
         
     },
@@ -84,7 +84,7 @@ import productimg11 from '@/public/product11.png'
         prodtitle:"gr",
         brandname:"grdg",
          alttext:"ge",
-        desc:"rgrdgrd",
+        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image:productimg6
         
     },
@@ -95,8 +95,8 @@ import productimg11 from '@/public/product11.png'
         price:"100",
         prodtitle:"gr",
         brandname:"grdg",
-         alttext:"ge",
-        desc:"rgrdgrd",
+        alttext:"ge",
+        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image:productimg7
         
     },
@@ -108,7 +108,7 @@ import productimg11 from '@/public/product11.png'
         prodtitle:"gr",
         brandname:"grdg",
          alttext:"ge",
-        desc:"rgrdgrd",
+        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image:productimg8
         
     },
@@ -120,7 +120,7 @@ import productimg11 from '@/public/product11.png'
         prodtitle:"gr",
         brandname:"grdg",
          alttext:"ge",
-        desc:"rgrdgrd",
+        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image:productimg9
         
     },
@@ -132,7 +132,7 @@ import productimg11 from '@/public/product11.png'
         prodtitle:"gr",
         brandname:"grdg",
          alttext:"ge",
-        desc:"rgrdgrd",
+        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image:productimg10
         
     },
@@ -144,7 +144,7 @@ import productimg11 from '@/public/product11.png'
         prodtitle:"gr",
         brandname:"grdg",
         alttext:"ge",
-        desc:"rgrdgrd",
+        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         image:productimg11
         
     },

@@ -11,7 +11,9 @@
   "dependencies": {
     "@djagger/react-typewriter-effect": "^1.0.0",
     "@motionone/utils": "^10.15.1",
+    "@portabletext/react": "^3.0.7",
     "@radix-ui/react-dialog": "^1.0.4",
+    "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/react-select": "^1.2.2",
     "@radix-ui/react-slot": "^1.0.2",
     "@react-spring/web": "^9.7.2",
@@ -21,7 +23,7 @@
     "@types/react": "18.2.13",
     "@types/react-dom": "18.2.6",
     "autoprefixer": "10.4.14",
-    "class-variance-authority": "^0.6.0",
+    "class-variance-authority": "^0.6.1",
     "clsx": "^1.2.1",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.6",
@@ -48,12 +50,12 @@
     "sharp": "^0.32.5",
     "slick-carousel": "^1.8.1",
     "swr": "^2.2.2",
-    "tailwind-merge": "^1.13.2",
+    "tailwind-merge": "^1.14.0",
     "tailwindcss": "3.3.2",
-    "tailwindcss-animate": "^1.0.6",
+    "tailwindcss-animate": "^1.0.7",
     "typescript": "5.1.3",
     "typewriter-effect": "^2.20.1",
-    "vercel": "^32.2.1"
+    "vercel": "^32.2.3"
   },
   "devDependencies": {
     "@types/express": "^4.17.17",

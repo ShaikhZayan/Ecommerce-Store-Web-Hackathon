@@ -41,7 +41,7 @@ export default function Navbar() {
             </div>
           </Link>
           <div className="flex md:order-2 ">
-            <Button type="button" className="bg-[#ffff] w-10 h-10 font-medium rounded-full text-sm px-2 py-2 text-center justify-center mr-3 md:mr-0 lg:mr-10 lg:m-2">
+            <Button variant={"ghost"} type="button" className="bg-[#ffff] w-10 h-10 font-medium rounded-full text-sm px-2 py-2 text-center justify-center mr-3 md:mr-0 lg:mr-10 lg:m-2">
               <Link href={"/cart"}>
                 <div className="hover:duration-200 hover:scale-110">
                   <span className="absolute rounded-full bg-red-500 w-4 h-4 mx-3 -mt-1 flex items-center justify-center text-white text-xs">
