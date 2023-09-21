@@ -21,7 +21,7 @@ import productimg11 from '@/public/product11.png'
         name:"Brushed Raglan Sweatshirt",
         price:"88",
         alttext:"ge",
-        category:"Gay",
+        category:"Male",
         prodtitle:"gr",
         brandname:"Luis Vuitton",
         desc:`Fam locavore kickstarter distillery. Mixtape chillwave tumeric.`,
