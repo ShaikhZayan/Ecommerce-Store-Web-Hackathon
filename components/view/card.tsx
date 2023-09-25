@@ -58,8 +58,8 @@ export default function Card() {
     <div>
       <div className="space-y-4 justify-between px-6 md:px-36">
         <div className="text-center space-y-3">
-          <p className="text-blue-800 text-sm">PROMOTIONS</p>
-          <h3 className="text-3xl text-gray-800 font-bold">Our Promotions Events</h3>
+          <p className="text-blue-800 font-bold text-sm">PROMOTIONS</p>
+          <h3 className="text-3xl text-[#212121] font-bold">Our Promotions Events</h3>
         </div>
 
         <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-1">

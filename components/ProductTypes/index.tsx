@@ -15,11 +15,11 @@ const ProductsType = () => {
             {/* Heading */}
             <div className="text-center space-y-3">
               <p className="text-blue-800 font-bold text-sm">PROMOTIONS</p>
-              <h3 style={{ fontFamily: 'Sora' }} className="text-3xl text-gray-800 font-bold">Our Promotions Events</h3>
+              <h3 style={{ fontFamily: 'Sora' }} className="text-3xl text-[#212121] font-bold">Our Promotions Events</h3>
             </div>
 
             {/* Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 text-gray-800 mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 text-[#212121] mx-auto">
 
               {/* first grid */}
               <div className="w-full flex flex-col items-center justify-between sm:flex-row col-span-1 md:col-span-2 bg-[#d6d6d8] px-12" >

@@ -4,7 +4,7 @@ export type Product = {
   
     id:number,
     name:string,
-    price:string,
+    price:number,
     alttext:string,
     category?:string,
     image:string | StaticImageData,

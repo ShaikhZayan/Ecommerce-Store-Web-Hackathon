@@ -19,9 +19,10 @@ import { useInView } from "react-intersection-observer";
 
 
 export default function Hero() {
+  
 
   const ShoppingText = "Shopping \n Cart";
-  
+
   return (
     <div>
       <section className="text-gray-600 body-font">
@@ -58,19 +59,19 @@ export default function Hero() {
                 id="Badge"
                 variant="default"
                 aria-label="redirect the user to the sale page"
-                className="rounded-[5px] bg-[#e1edff] hover:bg-[#e1edff] text-[18px] text-blue-800 lg:px-5 lg:py-1 px-5 py-2"
+                className="rounded-[5px] bg-[#ffece3] hover:bg-[#f2dfd6] text-[17px] text-blue-800 lg:px-5 lg:py-1 px-5 py-2"
               >
                 Sale 70%
               </Badge>
             </motion.div>
-            <h1 id="HeroPageHeading" className="text-6xl md:text-6xl lg:text-[57px] text-slate-800 font-bold">
+            <h1 id="HeroPageHeading" className="text-6xl md:text-6xl lg:text-[57px] text-[#212121] font-bold">
               <span>
 
                 An Industrial Take On Streetwear
 
               </span>
             </h1>
-            <p className="text-gray-700 text-lg md:text-lg md:w-80 md:h-24">
+            <p className="text-[#212121] text-lg md:text-lg md:w-80 md:h-24">
 
               <Typewriter
                 cursor
@@ -84,18 +85,20 @@ export default function Hero() {
                 ]}
               />
             </p>
-          
+            <br />
+            <Link href={"/cart"}>
             <Button
               aria-label="redirect the user to the sale page"
-              className="flex gap-3 items-center rounded-[5px] text-lg ring-1 bg-[#212121] hover:bg-[#212121] text-white font-semibold py-8 px-4 md:px-6"
+              className="flex gap-3 items-center rounded-[1px] text-lg  text-white font-semibold py-8 px-4 md:px-6"
             >
-           
-              <ShoppingCart />
-              <p className="whitespace-pre leading-4">
-                {ShoppingText}
-              </p>
+             
+                <ShoppingCart />
+                <p className="whitespace-pre leading-4">
+                  {ShoppingText}
+                </p>
+         
             </Button>
-
+     </Link>
             <div>
               <div className="md:flex flex flex-wrap gap-4">
                 <span>
@@ -126,7 +129,7 @@ export default function Hero() {
                 animate={{ y: 0 }} // Final position (on-screen, at the top)
                 transition={{ duration: 0.8, ease: "easeInOut" }} // Animation duration and easing
               >
-        
+
                 <Image
                   src={HeroImage2} alt="heroimg" width={634} height={630} />
               </motion.div>

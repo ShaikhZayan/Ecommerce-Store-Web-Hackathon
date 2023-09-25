@@ -76,7 +76,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 
 export default function Strip() {
   return (
-    <section id="section1">
+    <section  id="section1">
       <ParallaxText baseVelocity={-5}>Under Maintenance</ParallaxText>
       <ParallaxText baseVelocity={5}>Made By Zayan</ParallaxText>
     </section>

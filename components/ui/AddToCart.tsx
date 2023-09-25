@@ -1,7 +1,6 @@
 import { ShoppingCart } from "lucide-react"
 import { Button } from "./Button"
 import { useDispatch } from "react-redux"
-import { cartActions } from "@/app/store/Slice/cartSlice"
 import { title } from "process";
 
 export default function AddToCart() {

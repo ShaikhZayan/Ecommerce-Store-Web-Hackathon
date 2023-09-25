@@ -19,11 +19,11 @@ export default function RootLayout({
 
       <head />
 
-      <body>
+      <body >
         
         <Providers>
 
-        <Navbar />
+        <Navbar  />
         {children}
 
         </Providers>

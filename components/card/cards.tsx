@@ -8,7 +8,7 @@ import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-re
 const Cardcode = (props: {
   id: number;
   title: string;
-  price: string;
+  price: number;
   category?: string;
   alt: string;
   image: string | StaticImageData;

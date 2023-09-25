@@ -43,9 +43,9 @@ export default function Navbar() {
           <div className="flex md:order-2 ">
             <Button variant={"ghost"} type="button" className="bg-[#ffff] w-10 h-10 font-medium rounded-full text-sm px-2 py-2 text-center justify-center mr-3 md:mr-0 lg:mr-10 lg:m-2">
               <Link href={"/cart"}>
-                <div className="hover:duration-200 hover:scale-110">
-                  <span className="absolute rounded-full bg-red-500 w-4 h-4 mx-3 -mt-1 flex items-center justify-center text-white text-xs">
-                    <div className="mr-[2px] ml-[1px] -mt-[1px] mb-[1px] text-[11px]">{totalQuantity}</div>
+                <div className="hover:duration-200">
+                  <span className="absolute rounded-full bg-red-500 w-4 h-4 translate-x-3 translate-y-1 -mt-2 flex items-center justify-center text-white text-xs">
+                    <div className="mr-[1px] ml-[1px] mt-[1px] mb-[2px] text-[11px]">{totalQuantity}</div>
                   </span>
                   <ShoppingCart />
                 </div>
@@ -92,31 +92,31 @@ export default function Navbar() {
                   <SheetDescription>
                     <ul className="mt-52 justify-between">
                       <Link href={"/"}>
-                        <li style={{ fontFamily: "Sora" }} className="text-3xl translate-x-1 py-2 text-slate-800 hover:text-slate-700">
+                        <li  className="text-3xl translate-x-1 py-2 text-[#212121] hover:text-[#212121]/90">
                           Home
                         </li>
                       </Link>
 
                       <Link href={"/category/Female"}>
-                        <li style={{ fontFamily: "Sora" }} className="text-3xl py-2 translate-x-1 text-slate-800 hover:text-slate-700">
+                        <li  className="text-3xl py-2 translate-x-1 text-[#212121] hover:text-[#212121]/90">
                           Female
                         </li>
                       </Link>
 
                       <Link href={"/category/Male"}>
-                        <li style={{ fontFamily: "Sora" }} className="text-3xl translate-x-1 py-2 text-slate-800 hover:text-slate-700">
+                        <li  className="text-3xl translate-x-1 py-2 text-[#212121] hover:text-[#212121]/90">
                           Male
                         </li>
                       </Link>
 
                       <Link href={"/category/Kidz"}>
-                        <li style={{ fontFamily: "Sora" }} className="text-3xl py-2 translate-x-1 text-slate-800 hover:text-slate-700">
+                        <li  className="text-3xl py-2 translate-x-1 text-[#212121] hover:text-[#212121]/90">
                           Kidz
                         </li>
                       </Link>
 
                       <Link href={"/products"}>
-                        <li style={{ fontFamily: "Sora" }} className="text-3xl py-2 translate-x-1 text-slate-800 hover:text-slate-700">
+                        <li  className="text-3xl py-2 translate-x-1 text-[#212121] hover:text-[#212121]/90">
                           All Products
                         </li>
                       </Link>
@@ -136,8 +136,9 @@ export default function Navbar() {
             <ul className="flex flex-col font-medium text-lg p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
               <li>
                 <Link
+                 
                   href="/"
-                  className="block py-2 pl-1 pr-1   text-gray-900 rounded hover:text-blue-700"
+                  className="block py-2 pl-1 pr-1  text-[#212121] hover:text-[#212121]/90"
                   aria-current="page"
                 >
                   Home
@@ -145,32 +146,36 @@ export default function Navbar() {
               </li>
               <li>
                 <Link
+                
                   href="/category/Male"
-                  className="block py-2 pl-1 pr-1    text-gray-900 rounded hover:text-blue-700"
+                  className="block py-2 pl-1 pr-1   text-[#212121] hover:text-[#212121]/90"
                 >
                   Male
                 </Link>
               </li>
               <li>
                 <Link
+                 
                   href="/category/Female"
-                  className="block py-2 pl-1 pr-1 text-gray-900 rounded hover:text-blue-700"
+                  className="block py-2 pl-1 pr-1 text-[#212121] hover:text-[#212121]/90"
                 >
                   Female
                 </Link>
               </li>
               <li>
                 <Link
+                 
                   href="/category/Kidz"
-                  className="block py-2 pl-1 pr-1  text-gray-900 rounded hover:text-blue-700"
+                  className="block py-2 pl-1 pr-1 text-[#212121] hover:text-[#212121]/90"
                 >
                   Kidz
                 </Link>
               </li>
               <li>
                 <Link
+                 
                   href="/products"
-                  className="block py-2 pl-1 pr-13   text-gray-900 rounded hover:text-blue-700"
+                  className="block py-2 pl-1 pr-13  text-[#212121] hover:text-[#212121]/90"
                 >
                   All Products
                 </Link>

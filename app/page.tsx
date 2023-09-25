@@ -9,6 +9,7 @@ import ProductTypes from '@/components/ProductTypes'
 import Strip from '@/components/Strip/strip'
 import Allcard from '@/components/card/allcards'
 import Card from '@/components/view/card'
+import Copyright from '@/components/copyright/copyright';
 
 function Home() {
   return (
@@ -19,7 +20,9 @@ function Home() {
         <Card/>
         <Jewellery/>
         <Newslatter/>
-        <Strip/>
+        {/* <Strip/> */}
+        <Footer/>
+        <Copyright/>
 
     </div>
   )
