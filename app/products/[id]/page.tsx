@@ -66,7 +66,7 @@ export default function Page({ params }: { params: { id: number } }) {
 
                 <div className="p-6 space-y-5">
                   <div className='h-16'>
-                  <h1 style={{ fontFamily: "sans-serif" }} className="text-xl sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl text-[#212121]">{product.name}</h1>
+                  <h1 style={{ fontFamily: "sans-serif" }} className="text-xl font-semibold sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl text-[#212121]">{product.name}</h1>
                     <p className="text-gray-400 text-md font-medium">{product.brandname}</p>
                   </div>
              

@@ -85,38 +85,38 @@ export default function Navbar() {
               </SheetTrigger>
               <SheetContent className="bg-[#ffffff] flex justify-center"> {/* Center the content */}
                 <SheetHeader>
-                  <SheetTitle className="flex">
+                  <SheetTitle className="flex justify-center">
                     <Image src={logo} alt={"Logo"} />
                   </SheetTitle>
                   <hr />
                   <SheetDescription>
                     <ul className="mt-52 justify-between">
                       <Link href={"/"}>
-                        <li  className="text-3xl translate-x-1 py-2 text-[#212121] hover:text-[#212121]/90">
+                        <li style={{fontFamily:"Sora"}} className="text-3xl translate-x-1 py-2 text-[#212121] hover:text-[#212121]/90">
                           Home
                         </li>
                       </Link>
 
                       <Link href={"/category/Female"}>
-                        <li  className="text-3xl py-2 translate-x-1 text-[#212121] hover:text-[#212121]/90">
+                        <li style={{fontFamily:"Sora"}} className="text-3xl py-2 translate-x-1 text-[#212121] hover:text-[#212121]/90">
                           Female
                         </li>
                       </Link>
 
                       <Link href={"/category/Male"}>
-                        <li  className="text-3xl translate-x-1 py-2 text-[#212121] hover:text-[#212121]/90">
+                        <li style={{fontFamily:"Sora"}} className="text-3xl translate-x-1 py-2 text-[#212121] hover:text-[#212121]/90">
                           Male
                         </li>
                       </Link>
 
                       <Link href={"/category/Kidz"}>
-                        <li  className="text-3xl py-2 translate-x-1 text-[#212121] hover:text-[#212121]/90">
+                        <li style={{fontFamily:"Sora"}} className="text-3xl py-2 translate-x-1 text-[#212121] hover:text-[#212121]/90">
                           Kidz
                         </li>
                       </Link>
 
                       <Link href={"/products"}>
-                        <li  className="text-3xl py-2 translate-x-1 text-[#212121] hover:text-[#212121]/90">
+                        <li style={{fontFamily:"Sora"}} className="text-3xl py-2 translate-x-1 text-[#212121] hover:text-[#212121]/90">
                           All Products
                         </li>
                       </Link>
