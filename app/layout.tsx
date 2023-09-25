@@ -3,6 +3,7 @@ import Navbar from '../components/nav/page';
 import Footer from '@/components/footer/footer';
 import { useRouter } from 'next/router';
 import { Providers } from '@/components/ui/provider';
+import Copyright from '@/components/copyright/copyright';
 
 export const metadata = {
   title: 'Create Next App',
@@ -25,7 +26,9 @@ export default function RootLayout({
 
         <Navbar  />
         {children}
-
+        <Footer/>
+        <Copyright/>
+        
         </Providers>
       </body>
     </html>

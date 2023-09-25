@@ -21,8 +21,7 @@ function Home() {
         <Jewellery/>
         <Newslatter/>
         {/* <Strip/> */}
-        <Footer/>
-        <Copyright/>
+       
 
     </div>
   )
