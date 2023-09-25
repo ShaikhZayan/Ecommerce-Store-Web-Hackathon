@@ -66,10 +66,11 @@ export default function Page({ params }: { params: { id: number } }) {
 
                 <div className="p-6 space-y-5">
                   <div className='h-16'>
-                    <h1 style={{ fontFamily: "sans-serif" }} className="text-[33px] text-[#212121]">{product.name}</h1>
-                    <p className="text-gray-400 text-xl font-medium">{product.brandname}</p>
+                  <h1 style={{ fontFamily: "sans-serif" }} className="text-xl sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl text-[#212121]">{product.name}</h1>
+                    <p className="text-gray-400 text-md font-medium">{product.brandname}</p>
                   </div>
-                  <br />
+             
+                 
 
                   <div className="h-30 space-y-2">
                     <p className="text-md uppercase font-semibold text-[#212121]">Select Size</p>
@@ -156,7 +157,7 @@ export default function Page({ params }: { params: { id: number } }) {
                 <p style={{ fontFamily: 'Sora' }} className="text-gray-700 font-bold text-2xl">Product Information</p>
               </div>
               <div className="flex flex-col gap-2 md:flex-row mt-4 ">
-                <h3 className="text-[#666] basis-1/4  text-base font-bold max-w-6xl">
+                <h3 className="text-[#666] basis-1/4 text-base font-bold max-w-6xl">
                   PRODUCT DETAILS
                 </h3>
                 <p className="basis-2/4 text-gray-500 text-justify tracking-wider leading-relaxed scroll-m-20"><span>
@@ -168,13 +169,13 @@ export default function Page({ params }: { params: { id: number } }) {
                   PRODUCT CARE
                 </h3>
                 <div className="">
-                  <li className="list-disc basis-3/4 text-[#212121] font-bold text-justify tracking-wider leading-relaxed scroll-m-20">
+                  <li className="list-disc basis-3/4 text-[#212121] font-semibold text-justify tracking-wider leading-relaxed scroll-m-20">
                     Hand wash using cold water.
                   </li>
-                  <li className="list-disc basis-3/4 text-[#212121] font-bold text-justify tracking-wider leading-relaxed scroll-m-20">
+                  <li className="list-disc basis-3/4 text-[#212121]  font-semibold text-justify tracking-wider leading-relaxed scroll-m-20">
                     Do not using bleach.
                   </li>
-                  <li className="list-disc basis-3/4 text-[#212121] font-bold text-justify tracking-wider leading-relaxed scroll-m-20">
+                  <li className="list-disc basis-3/4 text-[#212121]  font-semibold text-justify tracking-wider leading-relaxed scroll-m-20">
                     Hang it to dry.
                   </li>
                 </div>
