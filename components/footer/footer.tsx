@@ -13,9 +13,9 @@ const Footer = () => {
  
     
     return (
-        <div className='mx-auto max-w-screen-xl px-3 med:px-10 zero:px-4 '>
+        <div className='mx-auto max-w-screen-xl px-3 med:px-10 zero:px-4'>
           
-          <div className='flex flex-col items-center justify-center'>
+          <div className='flex flex-wrap justify-center'>
             <ToastContainer
                 
                 position="top-right"

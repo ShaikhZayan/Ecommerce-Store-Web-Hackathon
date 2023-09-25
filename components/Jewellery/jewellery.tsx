@@ -59,7 +59,7 @@ const Jewellery = () => {
                             />
                         </div>
                         <div className="text-center">
-                            <p className="h-60 font-medium text-gray-500 tracking-widest">
+                            <p className="font-medium text-gray-500 tracking-widest">
                                 This piece is ethically crafted in our small family-owned workshop
                                 in Peru with unmatched attention to detail and care. The Natural
                                 color is the actual natural color of the fiber, undyed and 100%
@@ -67,7 +67,7 @@ const Jewellery = () => {
                             </p>
                             <div className="">
                                 <Link href={"/products"}>
-                                    <Button style={{ fontFamily: 'Sora' }} variant={"jewellery"} className="p-3 h-auto tracking-wide font-semibold zero:p-4 zero:px-5 zero:text-xl  scroll-m-20 zero:tracking-wide bg-[#212121]  text-white lg:w-2/4 lg:py-2  hover:bg-[#212121] lg:text-sm">
+                                    <Button style={{ fontFamily: 'Sora' }} variant={"jewellery"} className="p-3 mt-10 h-auto tracking-wide font-semibold zero:p-4 zero:px-5 zero:text-xl  scroll-m-20 zero:tracking-wide bg-[#212121]  text-white lg:w-2/4 lg:py-2  hover:bg-[#212121] lg:text-sm">
                                         See All Products
                                     </Button>
                                 </Link>

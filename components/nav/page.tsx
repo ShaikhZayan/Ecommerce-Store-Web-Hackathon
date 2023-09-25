@@ -45,7 +45,7 @@ export default function Navbar() {
               <Link href={"/cart"}>
                 <div className="hover:duration-200">
                   <span className="absolute rounded-full bg-red-500 w-4 h-4 translate-x-3 translate-y-1 -mt-2 flex items-center justify-center text-white text-xs">
-                    <div className="mr-[1px] ml-[1px] mt-[1px] mb-[2px] text-[11px]">{totalQuantity}</div>
+                    <div style={{fontFamily:"monospace"}} className="mr-[2px] ml-[1px] mt-[1px] mb-[2px] text-[11px]">{totalQuantity}</div>
                   </span>
                   <ShoppingCart />
                 </div>

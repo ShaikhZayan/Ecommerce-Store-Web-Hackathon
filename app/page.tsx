@@ -11,10 +11,11 @@ import Allcard from '@/components/card/allcards'
 import Card from '@/components/view/card'
 import Copyright from '@/components/copyright/copyright';
 
-function Home() {
+
+function Home(){
   return (
     <div>
-        
+
         <Hero/>
         <ProductTypes/>
         <Card/>

@@ -11,6 +11,8 @@
   "dependencies": {
     "@djagger/react-typewriter-effect": "^1.0.0",
     "@motionone/utils": "^10.15.1",
+    "@ngneat/hot-toast": "^6.0.0",
+    "@ngneat/overview": "^5.1.0",
     "@portabletext/react": "^3.0.7",
     "@radix-ui/react-dialog": "^1.0.4",
     "@radix-ui/react-icons": "^1.3.0",
@@ -36,6 +38,7 @@
     "pure-react-carousel": "^1.30.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
     "react-intersection-observer": "^9.5.2",
     "react-multi-carousel": "^2.8.4",
     "react-portable-text": "^0.6.0",

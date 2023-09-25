@@ -23,7 +23,7 @@ function CartPage() {
           <div className="mx-auto">
             <div className="py-6">
               {cartArray.length > 0 && ( 
-                <h1 style={{ fontFamily: "Sora" }} className="text-2xl font-semibold text-gray-900">
+                <h1 style={{ fontFamily: "Sora" }} className="text-2xl font-semibold text-[#212121]">
                   Shopping Cart
                 </h1>
               )}
@@ -103,16 +103,16 @@ function CartPage() {
                   ))}
                 </div>
                 <div>
-                  <div className="basis-1/4 space-y-6 p-2 zero:px-6 mt-12 lg:mt-0 rounded-md bg-slate-100">
-                    <h6 className="font-semibold text-xl">Order Summary</h6>
+                  <div className="basis-1/4 space-y-6 p-2 zero:px-6 mt-12 w-auto h-auto lg:mt-0 rounded-md bg-slate-100">
+                    <h6 style={{fontFamily:"Sora"}} className="font-semibold text-xl">Order Summary</h6>
                     <div className="flex justify-between">
-                      <p className="text-lg font-light">Quantity:</p>
-                      <p className="text-lg font-light">
+                      <p className="text-lg font-medium">Quantity:</p>
+                      <p className="text-lg font-normal">
                         {cartArray.reduce((total: any, item: { quantity: any; }) => total + item.quantity, 0)} Product
                       </p>
                     </div>
                     <div className="flex justify-between">
-                      <p className="text-lg font-light">Subtotal:</p>
+                      <p className="text-lg font-medium">Subtotal:</p>
                       <p>${calculateTotalAmount()}</p>
                     </div>
                     <Button
@@ -129,6 +129,7 @@ function CartPage() {
                 <p>
 
                   <svg
+                   
                     stroke="currentColor"
                     fill="currentColor"
                     strokeWidth={0}
@@ -140,7 +141,7 @@ function CartPage() {
                     <path d="M832 312H696v-16c0-101.6-82.4-184-184-184s-184 82.4-184 184v16H192c-17.7 0-32 14.3-32 32v536c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V344c0-17.7-14.3-32-32-32zm-432-16c0-61.9 50.1-112 112-112s112 50.1 112 112v16H400v-16zm392 544H232V384h96v88c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-88h224v88c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-88h96v456z" />
                   </svg>
                 </p>
-                <p style={{fontFamily:"Sora"}}className="font-bold text-4xl tracking-widest leading-relaxed scroll-m-20">
+                <p style={{fontFamily:"Sora"}}className="text-[#212121] font-bold lg:text-4xl md:text-ld sm:text-sm  tracking-widest leading-relaxed scroll-m-20">
                   Your shopping bag is empty
                 </p>
               </div>

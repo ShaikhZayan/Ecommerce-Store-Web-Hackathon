@@ -3,7 +3,7 @@ import React, { Children } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import next from 'next/types'
 import { store } from '@/app/store/store';
-import Cart from '@/app/cart/page'
+import Cart from '@/app/cart/cart';
 import { Provider } from 'react-redux'
 
 

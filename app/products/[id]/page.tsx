@@ -16,6 +16,8 @@ import { buttonVariants } from "@/components/ui/Button"
 import Productimg1 from "@/public/product-page-01-related-product-01 (1).jpg";
 import { CartItem, addToCart } from '@/app/store/Slice/cartSlice';
 import { useDispatch } from "react-redux"
+import { ToastContainer, toast } from 'react-toastify';
+import { HotToastService } from '@ngneat/hot-toast';
 
 
 
@@ -82,7 +84,7 @@ export default function Page({ params }: { params: { id: number } }) {
                   </div>
                   <br />
                   <div className="flex space-x-7">
-                    
+
                     <p style={{ fontFamily: "Sora" }} className="font-semibold text-md text-[#212121] mt-2">Quantity:</p>
 
                     <div className='flex items-center gap-x-2' >
@@ -102,8 +104,11 @@ export default function Page({ params }: { params: { id: number } }) {
 
                   </div>
                   <div className="flex gap-x-8 items-center">
+
+
                     <Button
                       onClick={() => {
+
                         dispatch(
                           addToCart({
                             quantity: num,
@@ -121,12 +126,27 @@ export default function Page({ params }: { params: { id: number } }) {
                             },
                           })
                         );
+
+                        toast.success('Product added to cart!', {
+                          position: "top-left",
+                          autoClose: 2000,
+                          hideProgressBar: false,
+                          closeOnClick: true,
+                          pauseOnHover: true,
+                          draggable: true,
+                          progress: undefined,
+                          theme: "light",
+                        
+                        });
                       }}
+
                       className="flex items-center px-4 py-2"
                     >
                       <ShoppingCart /> &nbsp; &nbsp; Add to Cart
                     </Button>
-                    <p style={{fontFamily:"Sora"}} className="text-2xl mr-5 -translate-x-3">${product.price}</p>
+
+
+                    <p style={{ fontFamily: "Sora" }} className="text-2xl mr-5 -translate-x-3">${product.price}</p>
                   </div>
                 </div>
 
@@ -141,7 +161,7 @@ export default function Page({ params }: { params: { id: number } }) {
                 </h3>
                 <p className="basis-2/4 text-gray-500 text-justify tracking-wider leading-relaxed scroll-m-20"><span>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ipsum, voluptatem eaque sunt repellendus harum, ut accusantium nihil repellat molestias eos voluptates nemo reiciendis aperiam, facere soluta mollitia quam laudantium.
-                  </span></p>
+                </span></p>
               </div>
               <div className="flex flex-col gap-y-2 md:flex-row mt-4 ">
                 <h3 className="text-[#666] basis-1/4  text-base font-bold max-w-6xl">

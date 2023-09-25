@@ -40,7 +40,7 @@ const Newslatter = () => {
         pauseOnHover
         theme="light" />
 
-      <div className="flex flex-wrap justify-center mt-20  w-auto scale-105">
+      <div className="flex flex-wrap justify-center mt-16 my-24 w-auto scale-105">
         <div className="relative text-center space-y-4 min-h-[40vh] md:h-[70vh] lg:min-h-[50rem] flex flex-col justify-center items-center text-[#212121]">
           <h6 className="absolute text-6xl md:text-[9rem] font-bold text-gray-200 text-center mx-auto -z-50 ">Newsletter</h6>
           <h6 style={{ fontFamily: 'Sora' }} className="text-3xl md:text-4xl font-bold">Subscribe Our Newsletter</h6>

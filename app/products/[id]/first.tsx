@@ -15,8 +15,9 @@ import { ShoppingCart } from 'lucide-react';
 import Productimg1 from "@/public/product-page-01-related-product-01 (1).jpg";
 import { CartItem, addToCart } from '@/app/store/Slice/cartSlice';
 import { useDispatch } from "react-redux"
+import toast, { Toaster } from 'react-hot-toast';
 
-
+const notify = () => toast.success('Successfully toasted!')
 
 
 
@@ -94,7 +95,7 @@ export default function Page({ params }: { params: { id: number } }) {
                 </div>
                 <div className="flex gap-x-8 items-center">
                   <Button
-                   onClick={() => {
+                   onClick={() => {               
                     dispatch(
                       addToCart({
                         quantity: num,
