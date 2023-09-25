@@ -47,12 +47,9 @@ const Footer = () => {
         </p>
         <div className="flex gap-x-4 ">
           <div className="bg-gray-300 py-2 px-2 rounded-xl">
-            <Link
-              target="_blank"
-              href={"https://www.linkedin.com/in/therafiali/"}
-            >
+            
              <Twitter />
-            </Link>
+        
           </div>
           <div className="bg-gray-300 py-2 px-2 rounded-xl">
             <Link
