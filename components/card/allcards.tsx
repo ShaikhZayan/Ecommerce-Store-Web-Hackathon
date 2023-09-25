@@ -15,9 +15,9 @@ export default function Allcard(props: { id: number, title: string, price: numbe
                     </div>
                     <div className='space-y-1 text-gray-600 font-semibold text-lg select-none'>
 
-                        <h6>{props.title}</h6>
-                        <p className='text-sm text-gray-400'>{props.category}</p>
-                        <p>${props.price}</p>
+                        <h6 className='text-xl'>{props.title}</h6>
+                        <p className='text-md text-gray-400'>{props.category}</p>
+                        <p style={{fontFamily:"Sora"}}>${props.price}</p>
 
                     </div>
                 </div>
